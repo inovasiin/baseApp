@@ -8,7 +8,7 @@ grails.plugin.springsecurity.userLookup.userDomainClassName = 'com.inovasi.basea
 grails.plugin.springsecurity.userLookup.authorityJoinClassName = 'com.inovasi.baseapp.SecUserRole'
 grails.plugin.springsecurity.authority.className = 'com.inovasi.baseapp.Role'
 grails.plugin.springsecurity.controllerAnnotations.staticRules = [
-	[pattern: '/',               access: ['permitAll']],
+	[pattern: '/',               access: ['isAuthenticated()']],
 	[pattern: '/error',          access: ['permitAll']],
 	[pattern: '/index',          access: ['isAuthenticated()']],
 	[pattern: '/index.gsp',      access: ['isAuthenticated()']],
